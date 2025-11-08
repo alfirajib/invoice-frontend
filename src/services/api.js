@@ -10,6 +10,7 @@ const api = axios.create({
     "Content-Type": "application/json",
   },
   timeout: 10000,
+  withCredentials: true,
 });
 
 api.interceptors.request.use((config) => {
@@ -33,8 +34,8 @@ export const authAPI = {
   login: (data) => api.post("/auth/login", data),
   getMe: () => api.get("/auth/me"),
   googleAuth: () => {
-    const backendUrl = API_URL.replace("/api", "");
-    window.location.href = `${backendUrl}/api/auth/google`;
+    // tidak perlu replace() manual
+    window.location.href = `${import.meta.env.VITE_API_URL}/auth/google`;
   },
 };
 
