@@ -1,5 +1,8 @@
-// frontend/src/pages/Register.jsx
-export const Register = () => {
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
+
+const Register = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -126,4 +129,4 @@ export const Register = () => {
   );
 };
 
-export default Login;
+export default Register;
