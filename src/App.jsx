@@ -6,7 +6,7 @@ import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import Invoices from "./pages/Invoices";
 import Pricing from "./pages/Pricing";
-import Layout from "./layout/Layout";
+import Layout from "./components/layout/Layout";
 
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated, loading } = useAuth();
